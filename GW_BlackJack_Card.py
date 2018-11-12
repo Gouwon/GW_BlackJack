@@ -1,4 +1,4 @@
-#class Card:
+#class Card():
 
 ## 카드의 구성
 ### self.name = 
