@@ -1,4 +1,4 @@
-#class GamePlay():
+""" class GamePlay():"""
     
 ## 게임 시작/끝 입력 받은 부분
 ### print("Welcome to BlackJack World!!! \n")
@@ -6,10 +6,18 @@
 ### if user_input == 's':    
 ### elif user_input == 'e':
 ###     exit()
-
-
+"""     def game_entrance():
+        print("Welcome to BlackJack World!!! \n")
+        user_input = input("Press 's' button to play the game!! \n(Exit Game 'e') >> ")
+        if user_input == 's':
+            game_play()
+        elif user_input == 'e':
+            print("Thank you for Playing!!!") 
+            exit()    """
+    
 ## 카드를 분배하는 부분
 ### 덱 class에서 호출하여서 카드를 나눠준다.
+
 
 ## 카드의 합을 구하는 부분
 ### 딜러 / 플레이어의 카드의 합 ===> dealer.sum / player.sum 호출

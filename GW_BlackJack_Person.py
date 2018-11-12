@@ -1,4 +1,10 @@
-#class Person:
+class Person:
+    name = "person"
+
+    def __init__(self):
+        self.name
+    
+    
 
 ## self.name
 ## Person의 카드의 합 ====> 딜러 / 플레이어의 카드의 합
