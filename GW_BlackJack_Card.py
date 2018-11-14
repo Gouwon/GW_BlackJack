@@ -2,32 +2,21 @@
 ### self.name = 
 ### self.value = 1 ~ 10
 
-def card():
-    patterns = ["Spade", "Heart", "Clover", "Diamond"]
-    numbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]    
-    card = []
-    print(patterns[0], patterns[1])
-    for i in patterns:
-        card = card.append(patterns[i])
-        print("card in for-loop : ", card)
+
+class Card:
+    def card(self):
+        patterns = ["S", "H", "C", "D"]
+        numbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]    
+        card = []
+        for i, j in enumerate(patterns):
+            for v, w in enumerate(numbers):
+                a = j + w
+                card.append(a)
+        
+        cards = []
+        
         return card
-
-# class Card():
-#     def __init__(self):    
-        
-        #     for v in numbers:
-        #         self.card = patterns[i] + numbers[v]
-        # print(self.card)    
-        # print("self.card = ", list(self.card))
     
-
-        
-
-print("card", card())
-# cards = []
-# cards.append(Card())
-# print("cards = ", cards)
-
 
 
 """  
