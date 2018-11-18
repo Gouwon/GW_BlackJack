@@ -1,10 +1,13 @@
-# import random
-# from GW_BlackJack_Card import Card 
+from GW_BlackJack_Card import card
+from random import shuffle
 
-# class Deck(Card):
+def deck_key():
+    deck_card = dict()
+    deck_keys = list()
+    deck_card = card()
+    deck_keys = list(deck_card.keys())
+    shuffle(deck_keys)
+    return deck_keys
 
-
-# ##  카드를 셔플하여 저장하는 부분 / 카드 class에서 import하여 변수로 사용.
-# #   deck = random.shuffle()
-# def deck():
-#   deck = card_shuffle(card())
+def deck_share(x):
+    return x.pop()

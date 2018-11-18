@@ -1,32 +1,65 @@
-""" class GamePlay():"""
+from GW_BlackJack_Card import card
+from GW_BlackJack_Deck import *
+from GW_BlackJack_Player import *
+from GW_BlackJack_Dealer import *
 
-## 게임 시작/끝 입력 받은 부분
-### print("Welcome to BlackJack World!!! \n")
-### user_input = input("Press 's' button to play the game!(Exit Game 'e')")
-### if user_input == 's':    
-### elif user_input == 'e':
-###     exit()
-"""     def game_entrance():
-        print("Welcome to BlackJack World!!! \n")
-        user_input = input("Press 's' button to play the game!! \n(Exit Game 'e') >> ")
-        if user_input == 's':
-            game_play()
-        elif user_input == 'e':
-            print("Thank you for Playing!!!") 
-            exit()    """
-    
-## 카드를 분배하는 부분
-### 덱 class에서 호출하여서 카드를 나눠준다.
-
-
-## 카드의 합을 구하는 부분
-### 딜러 / 플레이어의 카드의 합 ===> dealer.sum / player.sum 호출
-
-## 카드의 합을 판정하는 부분 (반복문 부분)
-""" def 21여부():
-    if dealer.sum = 21 or player.sum = 21:
-        break ===> 반복문 구성은 어떻게?
-    else dealer.sum > 21 or player.sum > 21:
-        break 
+def open_game():
+    print("Welcome to BlackJack Game World!!!")
+    user_input = input("Wanna Gambling? \nPress 's' to Start / 'e' to Exit >>> ")
+    if user_input == 's':
+        game()
+    elif user_input == 'e':
+        print("THANK YOU!! GOOD BYE!!~~")
+        exit()
     else:
-        게임진행 """
+        print("Wrong Insert. Please give me proper commend.")
+        exit()
+
+def game():
+    cards = card()   
+    deck = deck_key()   
+    player = Player()
+    dealer = Dealer()
+
+    while True:
+        give_2cards(player.hand, dealer.hand, deck)
+        print("Player's hand = ", player.hand)
+        player.bust()   ##1 플레이어 버스트시 딜러의 패와 점수는 어떻게 보여주는가?
+        dealer.bust()   ##1 딜러 버스트시 플레이어의 패와 점수는 어떻게 보여주는가?
+        player.decision(deck)
+        dealer.decision(deck)    
+        outcome(player.score, dealer.score)  ##3 플레이어와 딜러의 패와 점수들을 인자값 받지 않고 보여줄 방법은?
+    close_game()  ##2 close 내에서 재입력 받는 방법은?
+
+def give_2cards(x, y, z):
+    for i in range(2):
+        x.append(deck_share(z))
+        y.append(deck_share(z))
+        print("{}'s hand = ", list(x))
+        if y[0] <= y[1]:
+            print("Dealer's hand = {}".format(y[0]))
+        else:
+            print("Dealer's hand = {}".format(y[1]))
+
+def outcome(x, y):
+    ##3 플레이어와 딜러의 패와 점수들을 인자값 받지 않고 보여줄 방법은?
+    if x == y:
+        print("Draw!!!")
+    elif x > y:
+        print("Player win the game!")   
+    else:
+        print("Player lost the game!")
+
+def close_game():
+    while not True:  
+        user_input = input("Wanna continue the game??\nPress 'r' to resume the game or 'q' to quit >>> ")
+        if user_input == 'r':
+            return True
+        elif user_input == 'q':
+            print("THANK YOU FOR YOUR PLAYING!!!")
+            exit()
+        else:
+            print("Please check your Key!") ##2  키 재입력 받는 방법??
+            return False
+
+# def show_record():    ##3 플레이어와 딜러의 패와 점수들을 인자값 받지 않고 보여줄 방법은?
