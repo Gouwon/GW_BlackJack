@@ -9,7 +9,7 @@ class Player(Person):
     
     def decision(self, x):
         isStay = 0
-        while isStay != 0:
+        while isStay == 0:
             user_input = input("Hit or Stay??? \n'h' for Hit, 's' for Stay >>> ")
             if user_input == 'h':
                 self.hand.append(deck_share(x))
