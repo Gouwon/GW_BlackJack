@@ -9,9 +9,9 @@ class Dealer(Person):
     def decision(self, x):
         isStay = 0
         while isStay != 0:
-            if self.score < 17:
+            if self.score() < 17:
                 self.hand.append(deck_share(x))
-                self.bust()
+                self.over_21()
                 isStay = 1
             else:
                 break

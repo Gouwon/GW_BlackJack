@@ -16,12 +16,12 @@ def open_game():
         exit()
 
 def game():
-    cards = card()   
-    deck = deck_key()   
-    player = Player()
-    dealer = Dealer()
-
+    
     while True:
+        cards = card()   
+        deck = deck_key()   
+        player = Player()
+        dealer = Dealer()
         give_2cards(player.hand, dealer.hand, deck)
         print("Player's hand = ", player.hand)
         if player.over_21() or dealer.over_21():
@@ -30,7 +30,7 @@ def game():
         ##1 딜러 버스트시 플레이어의 패와 점수는 어떻게 보여주는가?
         player.decision(deck)
         dealer.decision(deck)    
-        outcome(player.score, dealer.score)  ##3 플레이어와 딜러의 패와 점수들을 인자값 받지 않고 보여줄 방법은?
+        outcome(player.score(), dealer.score())  ##3 플레이어와 딜러의 패와 점수들을 인자값 받지 않고 보여줄 방법은?
         close_game()  ##2 close 내에서 재입력 받는 방법은?
 
 def give_2cards(x, y, z):
@@ -52,7 +52,8 @@ def outcome(x, y):
         print("Player lost the game!")
 
 def close_game():
-    while not True:  
+    isClose = True
+    while isClose:  
         user_input = input("Wanna continue the game??\nPress 'r' to resume the game or 'q' to quit >>> ")
         if user_input == 'r':
             return True
@@ -61,6 +62,6 @@ def close_game():
             exit()
         else:
             print("Please check your Key!") ##2  키 재입력 받는 방법??
-            return False
+            return not True
 
 # def show_record():    ##3 플레이어와 딜러의 패와 점수들을 인자값 받지 않고 보여줄 방법은?

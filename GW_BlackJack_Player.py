@@ -14,10 +14,15 @@ class Player(Person):
             if user_input == 'h':
                 self.hand.append(deck_share(x))
                 print("{}'s hand = {}".format(self.name, self.hand))
-                self.bust() ##1 자식인스턴스의 버스트 시, 모든 자식 인스턴스들의 attribute를 보여줄 방법은?
+                self.over_21() ##1 자식인스턴스의 버스트 시, 모든 자식 인스턴스들의 attribute를 보여줄 방법은?
                 isStay = 1
             elif user_input == 's':
                 break
             else:
                 print("Please make sure your insert key!!")
                 continue
+    
+    def score(self):
+        a = super().score()
+        print("..............{}'s score = {:d} {}".format(self.name, a, self.hand))
+        return a
