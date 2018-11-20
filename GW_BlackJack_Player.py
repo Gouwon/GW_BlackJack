@@ -15,7 +15,7 @@ class Player(Person):
                 self.hand.append(deck_share(x))
                 print("{}'s hand = {}".format(self.name, self.hand))
                 self.over_21() ##1 자식인스턴스의 버스트 시, 모든 자식 인스턴스들의 attribute를 보여줄 방법은?
-                isStay = 1
+                return True
             elif user_input == 's':
                 break
             else:
