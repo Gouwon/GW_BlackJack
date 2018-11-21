@@ -13,4 +13,3 @@ def card():
         card_set[card_form[x]] = point[x]
     return card_set
 
-print(card())
