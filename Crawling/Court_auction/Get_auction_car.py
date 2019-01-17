@@ -15,7 +15,7 @@ cookies = 'bubwLocGubun=1&jiwonNm=%C0%FC%C3%BC&jpDeptCd=000000&daepyoSidoCd=&dae
 params = cu.cookie_parser(cookies)
 
 html = requests.post(target_url, params=params, headers=headers).text
-saveFile = './Crawling/results/result.html'
+saveFile = './result.html'
 with open(saveFile, 'w', encoding='utf-8') as file:
     file.write(html)
 
@@ -50,7 +50,7 @@ for i in range(0,total_targetRow):
     params2['targetRow'] = str(targetRow)
 
     html1 = requests.post(target_url, params=params2, headers=headers).text
-    saveFile = './Crawling/results/result{}.html'.format(i)
+    saveFile = './result{}.html'.format(i)
     with open(saveFile, 'w', encoding='utf-8') as file:
         file.write(html1)
 
@@ -70,10 +70,13 @@ headers = {"referer":"https://www.courtauction.go.kr/RetrieveRealEstMgakGyulgwaM
 cookies_detail = "jiwonNm=%BC%AD%BF%EF%C1%DF%BE%D3%C1%F6%B9%E6%B9%FD%BF%F8&saNo=20180130006083&maemulSer=&mokmulSer=&isSessionless=&_NAVI_CMD=InitMulSrch.laf&_NAVI_SRNID=PNO102027&_SRCH_SRNID=PNO102027&_CUR_CMD=RetrieveRealEstMgakGyulgwaMulList.laf&_CUR_SRNID=PNO102028&_NEXT_CMD=RetrieveRealEstDetailInqSaList.laf&_NEXT_SRNID=PNO102018&_PRE_SRNID=&_LOGOUT_CHK=&_FORM_YN=Y&_C_jiwonNm=%C0%FC%C3%BC&_C_mulStatcd=0001302&_C_mgakAmtGuganMax=&_C_realVowel=35207_45207&_C_daepyoSiguCd=&_C_gamEvalAmtGuganMin=&_C_sclsUtilCd=00008030101&_C_daepyoDongCd=&_C_gamEvalAmtGuganMax=&_C_mclsUtilCd=000080301&_C_yuchalCntGuganMax=&_C_rd3Rd4Cd=&_C_daepyoSidoCd=&_C_bubwLocGubun=1&_C_srnID=PNO102027&_C_mgakAmtGuganMin=&_C_lclsUtilCd=0000803&_C_jpDeptCd=000000&_C_yuchalCntGuganMin=&_C_rd1Cd=&_C_rd2Cd="
 params_detail = cu.cookie_parser(cookies_detail)
 
-html1 = requests.post(target_url, params=params2, headers=headers).text
-saveFile = './Crawling/results/result{}.html'.format(i)
+
+
+html1 = requests.post(target_url, params=params2, headers=headers)
+
+saveFile = './result{}.html'.format(i)
 with open(saveFile, 'w', encoding='utf-8') as file:
-    file.write(html1)
+    file.write(html1.text)
 
 
 import urllib
