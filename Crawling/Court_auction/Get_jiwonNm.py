@@ -38,44 +38,12 @@ def access_court_auction_site(url):
     driver.execute_script("$('#menu_s_2_son > div.son_h > ul > li:nth-child(8) > a').click();")
     driver.implicitly_wait(20)
 
-    ## 법원경매 매각결과검색 설정
-    handles2 = len(driver.window_handles)
-    print(">>>>>>>>>>", handles2)
-
-    # driver.switch_to.frame(driver.find_elements_by_tag_name("frame")[0])
-    userinput = input(">>>>>>>>>>>")
+    search_page_cookie = driver.page_source
+    with open('./results/search_page_cooke.html', 'w', 'utf-8') as file:
+        file.write(search_page_cookie.text)
+    user_check = input("......")
 
     
-    driver.execute_script( open('../jquery-3.3.1.js').read() )
-    driver.execute_script("$('#idJiwonNm > [value='전체']').click();")
-    driver.execute_script("$('#idMulStatcd > option:nth-child(2)').click();")   # { '매각' : '0001302' , '유찰' : '0001301', '전체' : ''}
-    driver.execute_script("$('#idLevel1 > option:nth-child(4)').click();")  # {'차량및운송장비' : '0000803' , '건물' : '0000802'}
-    # driver.execute_script("$('#idLevel2').value = '000080301';") # 차량
-    # driver.execute_script("$('#idLevel3').value = '00008030101';")
-    search_page_source = driver.page_source #search_page_source는 str
-    
-    print(">>>>>>>>>>>>>", type(search_page_source))
-
-    # with open('./search_page_source.html', mode='w', encoding='utf-8') as file:
-    #     file.write(search_page_source)
-
-    # from bs4 import BeautifulSoup
-
-    # soup = BeautifulSoup(search_page_source, 'html.parser')
-    driver.find_element_by_xpath('//*[@id="idLevel1"]/option[4]').click()
-    userinput = input(">>>>>>>>>>>")
-
-    driver.execute_script("$('#contents > form > div > a:nth-child(1)').click();")
-
-    userinput = input(">>>>>>>>>>>")
-    # driver.execute_script("$('#idLevel1').value = '전체';")
-
-
-    print("00000")
-    # response_indexFrame = driver.find_elements_by_tag_name('frame').indexFrame
-
-    # print(html)
-    driver.close()
 
 
 if __name__ == "__main__":
