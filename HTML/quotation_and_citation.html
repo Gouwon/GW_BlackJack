@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Quotation and Citation Elements</title>
+</head>
+<body>
+    <section>
+        <article>
+            <header>HTML &lt;q&gt; for Short Quotations</header>
+            <div class="content">
+                <p>HTML <span class="cd">&lt;q&gt;</span> 요소는 짧은 인용문을 정의한다. <br>브라우저는 보통 <span class="cd">&lt;q&gt;</span> 요소 주변에 쌍따옴표를 삽입한다.</p>
+                <div class="example">
+                    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p> <hr>&lt;p>WWF's goal is to: &lt;q>Build a future where people live in harmony with nature.&lt;/q>&lt;/p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>HTML &lt;blockquote&gt; for Quotations</header>
+            <div class="content">
+                <p>HTML <span class="cd">&lt;blockquote&gt;</span> 요소는 다른 소스에서 인용한 부분을 정의한다. <br>브라우저는 보통 <span class="cd">&lt;blockquote&gt;</span> 요소 주변에 한 칸 들여쓴다.</p>
+                <div class="example">
+                    <p>Here is a quote from WWF's website:</p>
+                    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    For 50 years, WWF has been protecting the future of nature.
+                    The world's leading conservation organization,
+                    WWF works in 100 countries and is supported by
+                    1.2 million members in the United States and
+                    close to 5 million globally.</blockquote> <hr>&lt;p>Here is a quote from WWF's website:&lt;/p>
+                    &lt;blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    For 50 years, WWF has been protecting the future of nature.
+                    The world's leading conservation organization,
+                    WWF works in 100 countries and is supported by
+                    1.2 million members in the United States and
+                    close to 5 million globally.
+                    &lt;/blockquote>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>HTML <span class="cd">&lt;abbr&gt;</span> for Abbreviations</header>
+            <div class="content">
+                <p>HTML <span class="cd">&lt;abbr&gt;</span> 요소는 두문자어나 축약어를 의미한다. <br>축약어를 만드는 것은 브라우저, 번역 프로그램, 검색엔진에게 유용한 정보를 줄 수 있다.</p>
+                <div class="example">
+                    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p> <hr>&lt;p>The &lt;abbr title="World Health Organization">WHO&lt;/abbr> was founded in 1948.&lt;/p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>HTML <span class="cd">&lt;address&gt;</span> for COntact Information</header>
+            <div class="content">
+                <p>HTML <span class="cd">&lt;address&gt;</span> 요소는 기사나 문서의 (저자/소유권자) 연락처 정보를 정의한다. <br><span class="cd">&lt;address&gt;</span> 요소는 보통 이태릭채로 나타난다. 대다수의 브라우저들은 요소의 앞뒤로 개행을 추가한다.</p>
+                <div class="example">
+                    <address>
+                            Written by John Doe.<br> 
+                            Visit us at:<br>
+                            Example.com<br>
+                            Box 564, Disneyland<br>
+                            USA
+                            </address> <hr>&lt;address>
+                                    Written by John Doe.&lt;br> 
+                                    Visit us at:&lt;br>
+                                    Example.com&lt;br>
+                                    Box 564, Disneyland&lt;br>
+                                    USA
+                                    &lt;/address>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>HTML <span class="cd">&lt;cite&gt;</span> for Work Title</header>
+            <div class="content">
+                <p>HTML <span class="cd">&lt;cite&gt;</span> 요소는 작품의 제목을 정의한다. <br>브라우저는 <span class="cd">&lt;cite&gt;</span> 요소ㅡㄹㄹ 이태릭채로 나타낸다.</p>
+                <div class="example">
+                    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p> <hr>&lt;p>&lt;cite>The Scream&lt;/cite> by Edvard Munch. Painted in 1893.&lt;/p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>HTML <span class="cd">&lt;bdo&gt;</span> for Bi-Directional Override</header>
+            <div class="content">
+                <p>HTML <span class="cd">&lt;bdo&gt;</span> 요소는 양방향 덮어쓰기를 정의한다. <br><span class="cd">&lt;bdo&gt;</span>요소는 보통 현재 텍스트의 쓰기 방향을 바꿀 때 사용된다. </p>
+                <div class="example">
+                    <bdo dir="rtl">This text will be written from right to left</bdo> <hr>&lt;bdo dir="rtl">This text will be written from right to left&lt;/bdo>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>HTML Quotation and Citation Elements</header>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&lt;abbr&gt;</td>
+                            <td>축약어나 두문자어를 의미한다.</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;address&gt;</td>
+                            <td>문서의 저자, 소유권자의 연락처 정보를 의미한다.</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;bdo&gt;</td>
+                            <td>텍스트의 글쓰기 방향을 정의한다.</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;blockquote&gt;</td>
+                            <td>다른 곳에서 인용한 부분을 정의한다.</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;cite&gt;</td>
+                            <td>작품의 제목을 정의한다.</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;q&gt;</td>
+                            <td>짧은 인라인 인용문을 정의한다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

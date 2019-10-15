@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Links</title>
+</head>
+<body>
+    <section>
+        <article>
+            <header>HTML Links - Hyperlinks</header>
+            <div class="content">
+                <p>HTML 링크들은 하피어링크들이다. <br>링크를 클릭하면 다른 문서로 점프한다. <br>링크 위로 마우스를 가져다 놓으면, 마우스 화살표는 작은 손으로 변한다.</p>
+            </div>
+        </article>
+        <article>
+            <header>HTML Links - Syntax</header>
+            <div class="content">
+                <p>하이퍼링크는 HTML <span class="cd">&lt;a&gt;</span> 태그로 정의한다. <br> <span class="cd">&lt;href&gt;</span> 속성은 목적지 주소를 정의한다. <br><strong>link text</strong> 부분은 보이는 부분이다. <br>링크 텍스트를 클릭하면 지정된 주소로 보낸다.</p>
+                <div class="example">
+                    <a href="url">link text</a>
+                    <pre>
+&lt;a href="url">link text&lt;/a>
+                    </pre>
+                </div>
+                <blockquote>
+                    참고: 부폴더 주소의 끝에 '/'가 없다면, 서버에 2개의 요청을 보내게 될 지 모른다. 많은 서버들은 자동적으로 주소의 끝에 '/'를 추가하고, 그리고 나서 새로운 요청을 만든다.
+                </blockquote>
+            </div>
+        </article>
+        <article>
+            <header>Local Links</header>
+            <div class="content">
+                <p>주소에는 절대주소가 있다. <br>로컬 링크는 상대 주소이다.</p>
+            </div>
+        </article>
+        <article>
+            <header>HTML Link Colors</header>
+            <div class="content">
+                <p>기본적으로 링크는 모든 브라우저들에서 다음과 같이 나타난다. <ul><li>아직 방문하지 않은 링크는 밑줄과 파란색이다.</li><li>방문한 링크는 밑줄과 보라색이다.</li><li>활성화된 링크는 밑줄과 빨간색이다.</li></ul>CSS를 이용하여 기본값을 바꿀 수 있다.</p>
+                <pre>
+&lt;style>
+    a:link {
+        color: green; 
+        background-color: transparent; 
+        text-decoration: none;
+    }
+    
+    a:visited {
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    
+    a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+&lt;/style>
+                </pre>
+            </div>
+        </article>
+        <article>
+            <header>HTML Links - The target Attribute</header>
+            <div class="content">
+                <p><span class="cd">target</span> 속성은 연결된 문서를 어디서 열 것인지를 정의한다. <br><span class="cd">target</span> 속성은 다음 값들 중 하나를 가질 수 있다. 
+                    <ul>
+                        <li><span class="cd">_blank</span> - 새로운 창이나 탭에서 링크된 문서를 연다.</li>
+                        <li><span class="cd">_self</span> - 링크를 클릭하면 같은 창이나 탭에서 링크된 문서를 연다(기본).</li>
+                        <li><span class="cd">_parent</span> - 링크된 문서를 부모 프레임에서 연다.</li>
+                        <li><span class="cd">_top</span> - 링크된 문서를 창의 전체 본문에서 연다.</li>
+                        <li><em>framename</em> - 링크된 문서를 해당 프레임에서 연다.</li>
+                    </ul></p>
+                    <blockquote>
+                        팁: 만약 웹페이지가 프레임 안에 있다면, <span class="cd">target="_top"</span>으로 해당 프레임을 벗어날 수 있다.
+                    </blockquote>
+            </div>
+        </article>
+        <article>
+            <header>HTML Links - Image as Link</header>
+            <div class="content">
+                <p>이미지를 링크로 사용할 수 있다.</p>
+                <div class="example">
+                    <pre>
+&lt;a href="default.asp">
+    &lt;img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+&lt;/a>
+                    </pre>
+                </div>
+                <blockquote>
+                    참고: <span class="cd">border:0;</span>가 추가되면 IE9(이전 버전)에서 이미지 주변에 경계선이 나타나는 것을 예방할 수 있다.
+                </blockquote>
+            </div>
+        </article>
+        <article>
+            <header>Link Titles</header>
+            <div class="content">
+                <p><span class="cd">title</span> 속성은 요소의 부가적인 정보를 정의한다. 정보는 마우스가 요소 위에 놓여 있을 때 툴팁의 형태로 보여진다.</p>
+                <div class="example">
+                    <pre>
+&lt;a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial&lt;/a>
+                    </pre>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>HTML Links - Create a Bookmark</header>
+            <div class="content">
+                <p>HTML 북마크는 사용자들을 웹 페이지의 특정한 부분으로 이동할 수 있게끔 할 때 사용된다. <br>북마크는 웹페이지가 길 때, 유용할 수 있다. <br>북마크를 만들기 위해서는 먼저 북마크를 생성하고, 거기에 링크를 추가해야 한다. <br>링크가 클릭되면, 페이지는 북마크가 있는 위치로 스크롤 된다.</p>
+                <div class="example">
+                    <pre>
+&lt;h2 id="C4">Chapter 4&lt;/h2
+&lt;a href="html_demo.html#C4">Jump to Chapter 4&lt;/a> - smae page
+&lt;a href="#C4">Jump to Chapter 4&lt;/a> - another page
+                    </pre>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>External Paths</header>
+            <div class="content">
+                <p>외부 페이지들은 전체 URL이나 현재 웹페이지의 상대 경로로 참고될 수 있다. </p>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

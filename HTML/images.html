@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Images</title>
+</head>
+<body>
+    <section>
+        <article>
+            <header>HTML Images Syntax</header>
+            <div class="content">
+                <p>HTML에서 이미지들은 <span class="cd">&lt;img&&gt;</span> 태그로 정의된다. <br><span class="cd">&lt;img&gt;</span> 태그는 빈 태그이며, 속성만 포함하고 있고, 닫는 태그도 가지지 않는다. <br><span class="cd">src</span> 속성은 이미지의 URL을 정의한다.</p>
+                <div class="example">
+<pre>
+&lt;img src="url">
+</pre>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>The alt Attribute</header>
+            <div class="content">
+                <p><span class="cd">alt</span> 속성은 사용자가 어떠한 이유로 이미지를 볼 수 없는 경우, 이미지의 대체 텍스를 제공한다. <br><span class="cd">alt</span> 속성의 값은 이미지를 나타내야 한다.</p>
+                <div class="example">
+                    <pre>
+&lt;img src="img_chania.jpg" alt="Flowers in Chania">
+                    </pre>
+                </div>
+                <blockquote>
+                    참고: <span class="cd">alt</span> 속성은 요구된다. 웹페이지는 이 속성이 없이는 올바르게 유효하지 않을 것이다.
+                </blockquote>
+            </div>
+        </article>
+        <article>
+            <header>Image Size - Width and Height</header>
+            <div class="content">
+                <p><span class="cd">style</span> 속성을 이용하여 이미지의 너비와 높이를 정의한다. <br>다르게는 <span class="cd">width</span>와 <span class="cd">height</span> 속성을 사용할 수 있다. <br><span class="cd">width</span>와 <span class="cd">height</span> 속성은 항상 이미지의 너비와 높이를 픽셀 단위로 정의한다.</p>
+                <div class="example">
+                    <pre>
+&lt;img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+&lt;img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+                    </pre>
+                </div>
+                <blockquote>
+                    참고: 항상 이미지의 너비와 높이를 정의하라. 만약 너비와 높이가 정의되지 않으면, 페이지는 이미지가 로드되는 동안에 깜빡거릴 지도 모른다.
+                </blockquote>
+            </div>
+        </article>
+        <article>
+            <header>Width and Height, or Style?</header>
+            <div class="content">
+                <span class="cd">width</span>와 <span class="cd">height</span>, <span class="cd">style</span> 속성들은 HTML에서 유효하다. <br>rmfjsk <span class="cd">style</span> 속서을 사용하는 것을 권장한다. <br>임지의 사이크가 바뀌는 것으로부터 style sheet를 보호해준다.
+            </div>
+        </article>
+        <article>
+            <header>Images in Another Folder</header>
+            <div class="content">
+                <p>주소가 정의되어지지 않으면, 브라우저는 웹페이지와 같은 폴더 안에서 이미지를 찾는다. <br>그러나 이미지를 부폴더 안에 저장하는 것이 보통이다. <span class="cd">src</span> 속성에 폴더 이름을 포함시켜 주어야 한다.</p>
+                <div class="example">
+                    <pre>
+&lt;img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+                    </pre>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>Images on Another Server</header>
+            <div class="content">
+                <p>몇 몇 웹 사이트들은 이미지를 이미지 서버들에 저장한다. <br>실제로 이미지들은 세계 어느 곳의 어떠한 웹 주소로부터도 접근할 수 있다.</p>
+            </div>
+        </article>
+        <article>
+            <header>Animated Images</header>
+            <div class="content">
+                <p>HTML은 움직이는 GIF도 허용한다.</p>
+                <div class="example">
+                    <pre>
+&lt;img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+                    </pre>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>Images as a Link</header>
+            <div class="content">
+                <p>이미지를 링크로 사용하기 위해서 <span class="cd">&lt;img&gt;</span> 태그를 <span class="cd">&lt;a&gt;</span> 태그 안에 넣는다.</p>
+                <div class="example">
+                    <pre>
+&lt;a href="default.asp">
+    &lt;img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+&lt;/a>
+                    </pre>
+                </div>
+                <blockquote>
+                    참고: <span class="cd">border:0;</span>가 추가되면 IE9(이전 버전)에서 이미지 주변에 경계선이 나타나는 것을 예방할 수 있다.
+                </blockquote>
+        </article>
+        <article>
+            <header>Image Floating</header>
+            <div class="content">
+                <p>이미지를 텍스트의 오른쪽이나 왼쪽에 뜨게끔 하려면 CSS의 <span class="cd">float</span> 속성을 사용하라.</p>
+                <div class="example">
+                    <pre>
+&lt;p>
+    &lt;img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+    The image will float to the right of the text.
+&lt;/p>
+&lt;p>
+    &lt;img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+    The image will float to the left of the text.
+&lt;/p>
+                    </pre>
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>HTML Screen Readers</header>
+            <div class="content">
+                <p>스크린 리더는 HTMl 코드를 읽고, 텍스트를 변환하며, 사용자가 내용물을 "들을" 수 있게끔 하는 소프트웨어 프로그램이다. 스크린 리더는 배우는 데 장애가 있거나 시각적으로 손상된 사람들에게 유용한다.</p>
+            </div>
+        </article>
+        <article>
+            <header>Chapter Summary</header>
+            <div class="content">
+                <ul>
+                    <li><span class="cd">&lt;img&gt;</span> - 이미지 정의 태그</li>
+                    <li><span class="cd">src</span> - 이미지의 URL을 정의하는 속성</li>
+                    <li><span class="cd">alt</span> - 이미지가 보여질 수 없을 때, 이미지에 대한 대체 텍스를 정의하는 속성</li>
+                    <li><span class="cd">width</span>와 <span class="cd">height</span> - 이미지의 사이즈를 정의하는 속성</li>
+                    <li>CSS <span class="cd">float</span> - CSS를 통해서 이미지를 띄우게끔 하는 속성</li>
+                    <li><span class="cd">&lt;map&gt;</span> - 이미지-맵을 정의하는 요소</li>
+                    <li><span class="cd">&lt;area&gt;</span> - 이미지-맵에서 클릭가능한 영역을 정의하는 요소</li>
+                    <li><span class="cd">usemap</span> - 이미지맵에서 포인트를 지정하는 속성</li>
+                    <li><span class="cd">&lt;picture&gt;</span> - 다른 장비들에서 다른 이미지들을 보여주게 하는 요소</li>
+                </ul>
+                <blockquote>
+                    참고: 이미지를 로드하는 데는 시간이 걸린다. 큰 이미지들은 페이지를 느리게 한다. 이미지를 주의해서 사용하라.
+                </blockquote>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

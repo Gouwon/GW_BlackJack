@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Elements</title>
+</head>
+<body>
+    <section>
+        <article>
+            <head>HTML Elements</head>
+            <div class="content">
+                <p>HTML 요소들은 보통 시작 태그와 종료 태그로 구성되고, 내용이 그 사이에 들어간다. <br>HTML 요소란 시작 태그부터 종료 태그까지의 모든 것이다.</p>
+                <div class="example">
+                    <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>tagname<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Content goes here...<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/tagname<span class="tagcolor" style="color:mediumblue">&gt;</span></span>                
+                </div>
+            </div>
+        </article>
+        <article>
+            <header>Nested HTML Elements</header>
+            <div class="content">
+                <p>HTML 요소들은 중첩될 수 있다(요소들이 요소들을 포함할 수 있다). <br>모든 HTML 문서들은 중첩된 HTML 요소들로 구성된다.
+                <pre>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+    &lt;h1>My First Heading</h1>
+    &lt;p>My first paragraph.</p>
+&lt;/body>
+&lt;/html>
+                </pre>
+                <dt>
+                    <dl><span class="cd">&lt;html&gt;</span></dl>
+                    <dd><span class="cd">&lt;html&gt;</span>요소는 문서 전체를 정의한다.</dd>
+                    <dl><span class="cd">&lt;body&gt;</span></dl>
+                    <dd><span class="cd">&lt;body&gt;</span> 요소는 문서의 본문을 정의한다.</dd>
+                    <dl><span class="cd">&lt;h1&gt;</span></dl>
+                    <dd><span class="cd">&lt;h1&gt;</span> 요소는 제목을 정의한다. </dd>
+                    <dl><span class="cd">&lt;p&gt;</span></dl>
+                    <dd><span class="cd">&lt;p&gt;</span> 요소는 문단을 정의한다.</dd>
+                </dt>
+                </p>
+            </div>
+        </article>
+        <article>
+            <header>Do Not Forget the End Tag</header>
+            <div class="content">
+                몇몇 HTML 요소들은 종료 태그를 잊어도 올바르게 나타날 것이다. <br>
+                <b>여기에 의존하지 말 것. 종료 태그를 잊는다면 예기지 못한 결과나 에러가 발생할 수 있다.</b>
+            </div>
+        </article>
+        <article>
+            <header>Empty HTML Elements</header>
+            <div class="content">
+                <p><span class="cd">&lt;br&gt;</span> 태그는 종료 태그가 없는 빈 내용을 가진 요소이다. <br>빈 요소들은 &lt;br /&gt; 와 같이 여는 태그 속에서 닫혀질 수 있다. <br>HTML5에서는 빈 요소들은 굳이 닫혀질 필요는 없다. 그러나 엄격한 확인이나 XML parser로 읽을 수 있는 문서를 만들 필요가 있을 경우에는 모든 HTML 요소들을 적절하게 닫아야 한다.</p>
+            </div>
+        </article>
+        <article>
+            <header>HTML Is Not Case Sensitive</header>
+            <div class="content">
+                <p>HTML 태그들은 대소문자를 가리지 않는다. <br>HTML5 표준은 소문자 태그들을 요구하지는 않지만,  W3C는 소문자를 HTML에서 사용할 것을 권고하고 있고, XHTML과 같은 엄격한 문서 형식들을 위해서 소문자를 사용하는 것을 요구한다.</p>
+            </div>
+        </article>
+
+    </section>
+</body>
+</html>
